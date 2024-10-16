@@ -1,0 +1,45 @@
+<!-- @author: Sai Tanuj Karavadi
+ @date: 10/15/2024
+ @for Fetch Code Project
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>૮˶• ﻌ •˶ა Doggy Breed Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="splash-screen" class="splash-screen">
+        <img id="dogImage" src="" alt="Dog Image" />
+        <h1>Welcome to the Dog Gallery!</h1>
+    </div>
+         
+    <div id="app" class="app hidden">
+        <div class="container">
+            <h1>Dog Breed Image Gallery</h1>
+
+            <div id="breed-background" class="breed-background">CyanCheetah</div>
+            <label class="breed-label" for="breed-select">Select Breed(s):</label>
+            <select id="breed-select" multiple onChange="handleBreedChange()" size="6">
+
+            </select>
+
+            <label class="breed-label" for="sub-breed-select">Select Sub-Breed:</label>
+            <select id="sub-breed-select" onChange="handleSubBreedChange()">
+                <option value="">-- Select Sub-Breed (Optional) --</option>
+                
+            </select>
+            
+            <button class="button-label" onclick="fetchImages()">Show Images</button>
+            <button class="button-label" onclick="window.location.href='about.html'">About Me</button>
+
+            <div id="gallery" class="gallery">
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

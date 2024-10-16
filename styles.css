@@ -1,0 +1,203 @@
+/*
+ * @author Sai Tanuj Karavadi
+ * @date 10/15/2024
+ * @subject Fetch Code Project
+ */
+
+/* 
+* I DO NOT OWN THE FONT
+* Attype Studio
+* https://www.fontspace.com/good-boy-font-f45611 
+*/
+ @font-face {
+    font-family: 'Little Paws';
+    src: url('GoodBoy-ZVJrl.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Little Paws', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #d7e3fc, #ccdbfd);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all items horizontally */
+    justify-content: center; /* Center items vertically if needed */
+    min-height: 100vh; /* Ensure the body takes the full height */
+}
+
+/* Splash Screen */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccdbfd;
+    color: white;
+    font-size: 4rem;
+    opacity: 1;
+    transition: opacity 2s ease;
+    overflow: hidden; /* Prevent overflow from dog images */
+    z-index: 10; /* Ensures splash screen is on top */
+}
+
+/* App Styles */
+.app {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.app.hidden {
+    display: none;
+}
+
+.app:not(.hidden) {
+    display: block;
+    opacity: 1;
+}
+
+.container {
+    max-width: 75vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+
+.splash-screen h1 {
+    z-index: 15; /* Ensure text is on top of images */
+    position: relative; /* Positioning context for z-index */
+}
+
+/* Adjust image styling for falling effect */
+.splash-screen img {
+    position: absolute;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    transition: transform 2s ease;
+    z-index: 1;
+}
+
+select {
+    padding: 12px; /* Increased padding for larger dropdown */
+    margin: 20px auto; /* Center the dropdown */
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    width: 250px; /* Fixed width for dropdown */
+    max-width: 100%; /* Prevent overflow */
+    display: block; /* Center the dropdown by making it block-level */
+}
+
+
+select:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.gallery img {
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    position: relative;
+    animation: scatter 0.5s forwards;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.about-container {
+    background-color: #c1d3fe;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px; /* Limit the width of the container */
+    text-align: center; /* Center the text */
+}
+
+
+
+.breed-label {
+    font-size: 2rem;
+    /* You can also add more styles if desired */
+}
+
+.button-label {
+    font-size: 1rem;
+    /* You can also add more styles if desired */
+}
+
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #343a40;
+    margin: 20px auto;
+    max-width: 100%;
+    font-size: 4rem;
+}
+
+h2 {
+    color: #495057;
+}
+
+p {
+    color: #6c757d; /* Light grey for paragraphs */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+button {
+    font-family: 'Little Paws', sans-serif;
+    background-color: #95b8d1; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #809bce; /* Darker shade on hover */
+}
+
+
+.breed-background {
+    position: fixed; /* Fixed position to stay in place */
+    top: 87%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering */
+    font-size: 20rem;
+    font-family: 'Kenyan', sans-serif;
+    color: #edf2fb; /* Inner color matches the background */
+    text-shadow: 
+        -2px -2px 0 #edf2fb,
+        2px -2px 0 #edf2fb,
+        -2px 2px 0 #edf2fb,
+        2px 2px 0 #edf2fb; /* Outline effect */
+    z-index: -1; /* Place behind everything */
+    pointer-events: none;
+}
+
+
